@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0332cfe7131097b409b98ac6ac44c560
+guid: 5d3171a7f79d1254aa5e0bbbec027a62
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6193017752021988066
-    second: GAME OVER_0
+      213: 4886547166628881360
+    second: GAME OVER (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,45 +100,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lose screen
+      name: You Win
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1121
-        width: 1587
-        height: 1124
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 1124}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e1d8a03aa2bfd0aa0800000000000000
-      internalID: -6193017752021988066
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Win Screen
-      rect:
-        serializedVersion: 2
-        x: 0
+        x: 261
         y: 0
-        width: 1587
-        height: 1121
+        width: 1075
+        height: 1154
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d32b1d02c080d340800000000000000
+      internalID: 4886547166628881360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Over
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1154
+        width: 1076
+        height: 1091
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8db7b3f1c3422e141ad13d3137c67ceb
-      internalID: -877370206
+      spriteID: d77326b1b93440b4b9f395b7179faee8
+      internalID: -698159044
       vertices: []
       indices: 
       edges: []
@@ -147,7 +147,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a9d00fa027847764a8d69c20dcb4b950
+    spriteID: ca33fe5b8e9408d44a3b452b7a1d94cd
     internalID: 0
     vertices: []
     indices: 
@@ -157,8 +157,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Win Screen: -877370206
-      lose screen: -6193017752021988066
+      Game Over: -698159044
+      You Win: 4886547166628881360
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
