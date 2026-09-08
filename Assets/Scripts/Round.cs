@@ -17,7 +17,9 @@ public class Round : MonoBehaviour
     [SerializeField] TMP_Text roundText;
 
     [Header("Round Settings")]
-    [SerializeField] int maxRounds = 10; 
+    [SerializeField] int maxRounds = 10;
+    [SerializeField] float minHeight;
+    [SerializeField] float maxHeight;
 
     private int currentRound;
     private float totalDisparity;
@@ -64,7 +66,7 @@ public class Round : MonoBehaviour
 
         moveCheckController.hasFinished = false;
 
-        person.transform.position = new Vector2(person.transform.position.x, Random.Range(2f, 6f));
+        person.transform.position = new Vector2(person.transform.position.x, Random.Range(minHeight, maxHeight));
 
         if (roundText != null)
         {
