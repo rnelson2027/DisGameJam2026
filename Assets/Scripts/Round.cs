@@ -116,7 +116,7 @@ public class Round : MonoBehaviour
         }
         else
         {
-            if (totalDisparity > 20)
+            if (totalDisparity > 10)
             {
                 SceneManager.LoadScene("Game Over");
             }
