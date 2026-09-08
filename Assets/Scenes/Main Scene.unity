@@ -648,7 +648,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3262125889952125088, guid: ff36743f498d30a488518f21fb83bfb0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.15
+      value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 3262125889952125088, guid: ff36743f498d30a488518f21fb83bfb0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1275,8 +1275,8 @@ MonoBehaviour:
   disparityText: {fileID: 650857057}
   roundText: {fileID: 464210638}
   maxRounds: 10
-  minHeight: -12
-  maxHeight: -5
+  minHeight: -13
+  maxHeight: -8
   moveCheckController: {fileID: 14874421}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
