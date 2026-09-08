@@ -337,6 +337,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7164396694630060408, guid: 044049d427318d5428c026b33172d4e0, type: 3}
+      propertyPath: m_Color.b
+      value: 0.38483447
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164396694630060408, guid: 044049d427318d5428c026b33172d4e0, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6565365
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164396694630060408, guid: 044049d427318d5428c026b33172d4e0, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8867924
+      objectReference: {fileID: 0}
     - target: {fileID: 8499064227430523784, guid: 044049d427318d5428c026b33172d4e0, type: 3}
       propertyPath: m_Name
       value: Chair Seat
@@ -783,6 +795,18 @@ PrefabInstance:
     - target: {fileID: 1214688616914199349, guid: 83f1d9c52d4e70a4a92f12469d2235aa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5973740921371105841, guid: 83f1d9c52d4e70a4a92f12469d2235aa, type: 3}
+      propertyPath: m_Color.b
+      value: 0.47267708
+      objectReference: {fileID: 0}
+    - target: {fileID: 5973740921371105841, guid: 83f1d9c52d4e70a4a92f12469d2235aa, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6478087
+      objectReference: {fileID: 0}
+    - target: {fileID: 5973740921371105841, guid: 83f1d9c52d4e70a4a92f12469d2235aa, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8867924
       objectReference: {fileID: 0}
     - target: {fileID: 7580279058056231899, guid: 83f1d9c52d4e70a4a92f12469d2235aa, type: 3}
       propertyPath: m_Name
