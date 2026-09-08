@@ -14,7 +14,7 @@ public class MoveAndCheck : MonoBehaviour
 
     private bool isMovingUp;
     private float diff;
-    private bool hasFinished; 
+    public bool hasFinished; 
 
     private InputAction spaceBarAction;
 
