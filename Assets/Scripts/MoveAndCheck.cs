@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement; // Added for scene loading
+
 
 public class MoveAndCheck : MonoBehaviour
 {
@@ -14,8 +14,9 @@ public class MoveAndCheck : MonoBehaviour
 
     private bool isMovingUp;
     private float diff;
-    private Rigidbody2D chairRb;
-    private bool hasFinished; // Prevents triggering scene change multiple times
+    private bool hasFinished; 
+
+    private InputAction spaceBarAction;
 
     void Start()
     {
@@ -24,7 +25,7 @@ public class MoveAndCheck : MonoBehaviour
             Debug.LogError("Chair or Person reference is not assigned in the inspector.");
             return;
         }
-        chairRb = chair.GetComponent<Rigidbody2D>();
+        spaceBarAction = InputSystem.actions.FindAction("Jump");
     }
 
     void Update()
@@ -32,21 +33,15 @@ public class MoveAndCheck : MonoBehaviour
         // Skip input handling once the release check has completed
         if (hasFinished) return;
 
-        var keyboard = Keyboard.current;
-        if (keyboard == null)
+        if (spaceBarAction.IsPressed())
         {
-            Debug.LogError("Keyboard input is not available.");
-            return;
+            chair.transform.position += new Vector3(0, speed*Time.deltaTime, 0);
+            Debug.Log(transform.position.y);
         }
 
-        // 1. Set movement state while held
-        isMovingUp = keyboard.spaceKey.isPressed;
-
-        // 2. ONLY run on the single frame Space is RELEASED
-        if (keyboard.spaceKey.wasReleasedThisFrame)
+        if (spaceBarAction.WasReleasedThisFrame())
         {
             hasFinished = true; // Lock execution so it runs only once
-            isMovingUp = false;
 
             diff = chair.referencePoint.position.y - person.referencePoint.position.y;
             Debug.Log($"Difference in Y position: {diff}"); //make pretty and print with a layer over top to hide prep for next play, make score percentage based on diff and print to screen
@@ -56,22 +51,22 @@ public class MoveAndCheck : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
-    {
-        MoveChair();
-    }
+    // void FixedUpdate()
+    // {
+    //     MoveChair();
+    // }
 
-    void MoveChair()
-    {
-        if (chairRb == null) return;
+    // void MoveChair()
+    // {
+    //     if (chairRb == null) return;
 
-        if (isMovingUp)
-        {
-            chairRb.linearVelocity = new Vector2(0f, speed);
-        }
-        else
-        {
-            chairRb.linearVelocity = Vector2.zero;
-        }
-    }
+    //     if (isMovingUp)
+    //     {
+    //         chairRb.linearVelocity = new Vector2(0f, speed);
+    //     }
+    //     else
+    //     {
+    //         chairRb.linearVelocity = Vector2.zero;
+    //     }
+    // }
 }
