@@ -29,7 +29,7 @@ public class Round : MonoBehaviour
 
     private bool roundFinished;
 
-    public TargetScript targetScriptRef;
+    public MoveAndCheck moveCheckController;
 
     // Update is called once per frame
 
@@ -62,7 +62,7 @@ public class Round : MonoBehaviour
 
         chair.transform.position = chairOriginalPosition;
 
-        targetScriptRef.hasFinished = false;
+        moveCheckController.hasFinished = false;
 
         person.transform.position = new Vector2(person.transform.position.x, Random.Range(2f, 6f));
 

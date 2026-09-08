@@ -151,6 +151,7 @@ MonoBehaviour:
   chair: {fileID: 1208136040}
   person: {fileID: 1721086592}
   speed: 5
+  hasFinished: 0
 --- !u!4 &14874422
 Transform:
   m_ObjectHideFlags: 0
@@ -1273,9 +1274,8 @@ MonoBehaviour:
   person: {fileID: 1721086592}
   disparityText: {fileID: 650857057}
   roundText: {fileID: 464210638}
-  roundTime: 10
   maxRounds: 10
-  outcomeThreshold: 10
+  moveCheckController: {fileID: 14874421}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
