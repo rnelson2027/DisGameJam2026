@@ -102,7 +102,7 @@ public class Round : MonoBehaviour
         if (disparityText != null)
         {
             disparityText.text =
-                "Disparity: " + disparity.ToString("F2");
+                "You're off by: " + disparity.ToString("F2");
         }
 
 
