@@ -16,7 +16,6 @@ public class Round : MonoBehaviour
     [SerializeField] TMP_Text roundText;
 
     [Header("Round Settings")]
-    [SerializeField] float roundTime = 10f;
     [SerializeField] int maxRounds = 10; 
     //[SerializeField] float outcomeThreshold = 10f;
 
@@ -110,7 +109,7 @@ public class Round : MonoBehaviour
         }
         else
         {
-            EndGame();
+            // create outcome
         }
     }
 
