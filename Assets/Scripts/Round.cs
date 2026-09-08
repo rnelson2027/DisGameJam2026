@@ -61,7 +61,7 @@ public class Round : MonoBehaviour
 
         chair.transform.position = chairOriginalPosition;
 
-        person.transfor.position = new Vector2(person.transform.position.x, Random.Range(3f, 10f));
+        person.transform.position = new Vector2(person.transform.position.x, Random.Range(3f, 10f));
 
         if (roundText != null)
         {
