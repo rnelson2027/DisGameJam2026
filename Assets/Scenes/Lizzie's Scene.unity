@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveAndCheck
   chair: {fileID: 1208136040}
-  person: {fileID: 0}
+  person: {fileID: 1721086592}
   speed: 5
 --- !u!4 &14874422
 Transform:
@@ -1224,7 +1224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Round
   chair: {fileID: 1208136040}
-  person: {fileID: 0}
+  person: {fileID: 1721086592}
   disparityText: {fileID: 650857057}
   roundText: {fileID: 464210638}
   roundTime: 10
