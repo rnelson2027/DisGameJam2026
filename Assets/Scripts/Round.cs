@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 
 // all  code in this file is conceptual and does not rely on the implementation of other code yet
@@ -17,7 +18,6 @@ public class Round : MonoBehaviour
 
     [Header("Round Settings")]
     [SerializeField] int maxRounds = 10; 
-    //[SerializeField] float outcomeThreshold = 10f;
 
     private int currentRound;
     private float totalDisparity;
@@ -28,6 +28,8 @@ public class Round : MonoBehaviour
     private InputAction spaceBarAction;
 
     private bool roundFinished;
+
+    public TargetScript targetScriptRef;
 
     // Update is called once per frame
 
@@ -60,7 +62,9 @@ public class Round : MonoBehaviour
 
         chair.transform.position = chairOriginalPosition;
 
-        person.transform.position = new Vector2(person.transform.position.x, Random.Range(3f, 10f));
+        targetScriptRef.hasFinished = false;
+
+        person.transform.position = new Vector2(person.transform.position.x, Random.Range(2f, 6f));
 
         if (roundText != null)
         {
@@ -75,6 +79,7 @@ public class Round : MonoBehaviour
         UpdateRoundText();
 
         roundFinished = false;
+
     }
 
 
@@ -109,7 +114,14 @@ public class Round : MonoBehaviour
         }
         else
         {
-            // create outcome
+            if (totalDisparity > 29)
+            {
+                SceneManager.LoadScene("Game Over");
+            }
+            else
+            {
+                SceneManager.LoadScene("You Win");
+            }
         }
     }
 
@@ -126,6 +138,5 @@ public class Round : MonoBehaviour
                 "Round " + currentRound + " / " + maxRounds;
         }
     }
-
 
 }
