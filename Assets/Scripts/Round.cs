@@ -2,7 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagment;
+using UnityEngine.SceneManagement;
 
 
 // all  code in this file is conceptual and does not rely on the implementation of other code yet
