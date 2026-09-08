@@ -37,6 +37,7 @@ public class Round : MonoBehaviour
 
     void Start()
     {
+        disparityText.text = "";
         chairOriginalPosition = chair.transform.position;
 
         spaceBarAction = InputSystem.actions.FindAction("Jump");
