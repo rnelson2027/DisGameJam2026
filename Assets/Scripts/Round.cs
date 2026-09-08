@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
-
+using UnityEngine.InputSystem;
 
 // all  code in this file is conceptual and does not rely on the implementation of other code yet
 public class Round : MonoBehaviour
@@ -23,15 +23,10 @@ public class Round : MonoBehaviour
     private float totalDisparity;
     private float disparity;
 
-    private Vector2 chairOriginalPosition;
-    private Vector2 personOriginalPosition;
     // Update is called once per frame
 
     void Start()
     {
-        chairOriginalPosition = chair.transform.position;
-        personOriginalPosition = person.transform.position;
-
         NewRound();
     }
 
@@ -48,8 +43,6 @@ public class Round : MonoBehaviour
         {
             disparityText.text = "";
         }
-        chair.transform.position = chairOriginalPosition;
-        person.transform.position = new Vector2(person.transform.position.x, Random.Range(3f, 10f));
 
         StartCoroutine(RoundTimer());
     }
@@ -71,12 +64,20 @@ public class Round : MonoBehaviour
 
         if (currentRound < maxRounds)
         {
+            yield return StartCoroutine(WaitForSpace());
+            person.transform.position = new Vector2(person.transform.position.x, Random.Range(3f, 10f));
             NewRound();
         }
         else
         {
             /// add end game options
         }
+    }
+
+    private IEnumerator WaitForSpace()
+    {
+        yield return new WaitUntil(() => Keyboard.current != null && Keyboard.current.spaceKey.IsPressed());
+        yield return new WaitUntil(() => Keyboard.current != null && !Keyboard.current.spaceKey.IsPressed());
     }
     
     private void CalculateDisparity()
