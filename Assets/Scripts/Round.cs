@@ -21,7 +21,7 @@ public class Round : MonoBehaviour
     [SerializeField] float minHeight;
     [SerializeField] float maxHeight;
 
-    private int currentRound;
+    private int currentRound = 1;
     private float totalDisparity;
     private float disparity;
 
